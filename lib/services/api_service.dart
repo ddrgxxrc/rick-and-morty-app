@@ -16,7 +16,7 @@ class ApiService {
         final List results = data['results'];
         return results.map((e) => Character.fromJson(e)).toList();
       } else {
-        return []; // في حال كانت الصفحة فارغة أو خطأ بسيط
+        return [];
       }
     } catch (e) {
       throw Exception('Failed to load characters: $e');

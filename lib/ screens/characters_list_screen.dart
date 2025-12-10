@@ -17,12 +17,10 @@ class _CharactersListScreenState extends State<CharactersListScreen> {
   @override
   void initState() {
     super.initState();
-    // جلب البيانات فور فتح الشاشة
     WidgetsBinding.instance.addPostFrameCallback((_) {
       context.read<CharactersProvider>().getCharacters(isRefresh: true);
     });
 
-    // مراقب السكرول للترقيم
     _scrollController.addListener(() {
       if (_scrollController.position.pixels >= _scrollController.position.maxScrollExtent - 200) {
         context.read<CharactersProvider>().getCharacters();
@@ -43,7 +41,6 @@ class _CharactersListScreenState extends State<CharactersListScreen> {
       appBar: AppBar(title: const Text("Rick and Morty")),
       body: Column(
         children: [
-          // شريط البحث
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: TextField(
@@ -66,7 +63,6 @@ class _CharactersListScreenState extends State<CharactersListScreen> {
             ),
           ),
 
-          // القائمة
           Expanded(
             child: Consumer<CharactersProvider>(
               builder: (context, provider, child) {

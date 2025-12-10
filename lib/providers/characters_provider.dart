@@ -21,7 +21,7 @@ class CharactersProvider with ChangeNotifier {
       _currentPage = 1;
       _characters = [];
       _hasMoreData = true;
-      _currentSearchQuery = ""; // تصفير البحث عند التحديث اليدوي
+      _currentSearchQuery = "";
     }
 
     if (!_hasMoreData) return;
@@ -55,7 +55,6 @@ class CharactersProvider with ChangeNotifier {
     _characters = [];
     _hasMoreData = true;
 
-    // استدعاء البيانات مباشرة مع كويري البحث الجديد
     getCharacters();
   }
 }
