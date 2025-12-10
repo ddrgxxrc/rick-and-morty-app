@@ -11,7 +11,6 @@ void main() {
         "species": "Human",
         "status": "Alive"
       };
-
       final character = Character.fromJson(json);
 
       expect(character.id, 1);
