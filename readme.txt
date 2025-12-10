@@ -1,31 +1,37 @@
 PROJECT: Rick and Morty Character Explorer
 ==========================================
 
-DESCRIPTION:
-A mobile application built with Flutter that fetches and displays characters
-from the Rick and Morty API. It demonstrates clean architecture, pagination,
-search functionality, and modern state management.
+Description:
+This is a Flutter mobile app that fetches characters from the Rick and Morty API.
+It shows a list of characters with pagination, allows searching by name, and displays
+detailed information when a character is selected.
 
-FEATURES:
-- Character List: Loads characters in chunks of 20 (Infinite Scrolling).
-- Search: Filter characters by name.
-- Details View: Display character status, species, and image.
-- Error Handling: Manages network errors and empty states.
+Features:
+- Character List: Loads characters in pages of 20 for smooth scrolling.
+- Search: Find characters by name.
+- Details View: See character's name, image, species, and status.
+- Error Handling: Shows messages when something goes wrong or the list is empty.
 
-TECHNOLOGIES:
-- Framework: Flutter (Dart)
-- State Management: Provider
-- Networking: http package
-- Architecture: Layered (Models, Services, Providers, Screens)
+Technologies:
+- Flutter (Dart)
+- Provider for state management
+- http package for API requests
+- Layered project structure: Models, Services, Providers, Screens
 
-HOW TO RUN:
-1. Make sure Flutter SDK is installed.
-2. Open the project folder in your terminal.
-3. Run "flutter pub get" to install dependencies.
-4. Run "flutter run" to launch the app.
+How to Run:
+1. Make sure you have Flutter installed.
+2. Open the project folder in your terminal or IDE.
+3. Run `flutter pub get` to fetch dependencies.
+4. Run `flutter run` to start the app.
 
-ARCHITECTURE DECISIONS:
-- Layered Architecture: Used to separate the UI code from the business logic
-  and data fetching, making the app easier to maintain and test.
-- Provider: Chosen for efficient state management and to decouple the
-  UI from the data layer.
+Architecture Decisions:
+- Layered approach separates UI from business logic and API code for easier maintenance.
+- Provider helps manage app state cleanly and keeps UI and data separate.
+
+Assumptions / Decisions:
+- Pagination loads 20 characters at a time.
+- Search works only on the loaded characters.
+- Error messages are kept simple and user-friendly.
+
+API Source:
+- Rick and Morty API: https://rickandmortyapi.com/documentation
