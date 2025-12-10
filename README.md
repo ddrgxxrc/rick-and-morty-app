@@ -1,16 +1,37 @@
-# untitled3
+# Rick and Morty Character Explorer
 
-A new Flutter project.
+## Description
+This is a Flutter mobile app that fetches characters from the Rick and Morty API.
+It shows a list of characters with pagination, allows searching by name, and displays
+detailed information when a character is selected.
 
-## Getting Started
+## Features
+- **Character List:** Loads characters in pages of 20 for smooth scrolling.
+- **Search:** Find characters by name.
+- **Details View:** See character's name, image, species, and status.
+- **Error Handling:** Shows messages when something goes wrong or the list is empty.
 
-This project is a starting point for a Flutter application.
+## Technologies
+- Flutter (Dart)
+- Provider for state management
+- http package for API requests
+- Layered project structure: Models, Services, Providers, Screens
 
-A few resources to get you started if this is your first Flutter project:
+## How to Run
+1. Make sure you have Flutter installed.
+2. Open the project folder in your terminal or IDE.
+3. Run `flutter pub get` to fetch dependencies.
+4. Run `flutter run` to start the app.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Architecture Decisions
+- Layered approach separates UI from business logic and API code for easier maintenance.
+- Provider helps manage app state cleanly and keeps UI and data separate.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Assumptions / Decisions
+- Pagination loads 20 characters at a time.
+- Search works only on the loaded characters.
+- Error messages are kept simple and user-friendly.
+
+## API Source
+- Rick and Morty API: [https://rickandmortyapi.com/documentation](https://rickandmortyapi.com/documentation)
+
