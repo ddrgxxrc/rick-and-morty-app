@@ -5,7 +5,6 @@ class CharacterDetailsScreen extends StatelessWidget {
   final Character character;
 
   const CharacterDetailsScreen({super.key, required this.character});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
